@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 
 
 function Shop() {
-  // Cambiamos el estado inicial a un array vacío.
   const [data, setData] = useState([]);
 
   useEffect(() => {
