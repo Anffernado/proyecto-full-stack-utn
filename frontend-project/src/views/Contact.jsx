@@ -26,7 +26,7 @@ const Contact = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          to: 'anffernando01@gmail.com', // Aquí pones el correo donde deseas recibir las respuestas
+          to: 'anffernando01@gmail.com',
           subject: `${formData.subject} - Mensaje de ${formData.name}`,
           text: `De: ${formData.name} (${formData.fromEmail}) ${formData.message}`
         })
