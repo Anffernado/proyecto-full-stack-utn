@@ -1,0 +1,404 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/*
+COLORS:
+
+*/
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100vw;
+  min-width: 1300px;
+  height: 100vh;
+  min-height: 900px;
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(138, 146, 143) 100%);
+}
+
+/*MENU - DASHBOARD*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 8%;
+  height: 90%;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.1);
+  background-color: rgba(81, 132, 156, 0.68);
+}
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  /*border: 0.1rem solid rgb(231, 231, 231);*/
+  border-radius: 1rem;
+  /*background-color: rgb(239, 239, 239);*/
+}
+
+.perfil-image {
+  object-fit: cover;
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 100%;
+  outline: 0.5rem solid rgb(32, 58, 90);;
+}
+
+h1 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.button-logout {
+  width: 50%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button-logout:hover {
+  background-color: rgb(209, 31, 31);
+}
+
+.button-logout:active {
+  background-color: rgb(149, 34, 34);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(201, 201, 201, 0.528);
+}
+
+.button-get-content {
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button-get-content:hover {
+  background-color: rgb(188, 188, 188);
+}
+
+.button-get-content:active {
+  background-color: rgb(153, 153, 153);
+}
+
+/*FORM ADD CONTENT - DASHBOARD*/
+.form-add-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 25%;
+  height: 90%;
+  padding: 1rem;
+  border: 0.5rem solid #eeeeee;
+  border-radius: 1rem;
+  box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.1);
+  background-color: #e5e5e5;
+}
+
+.form-preview-image {
+  object-fit: fill;
+  border: 0.1rem solid rgb(231, 231, 231);
+  outline: none;
+  width: 100%;
+  height: 50%;
+  border-radius: 1rem;
+  background-color: rgb(239, 239, 239);
+}
+
+.form-name-input {
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #363636;
+  background-color: rgb(239, 239, 239);
+}
+
+.form-price-input {
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #363636;
+  background-color: rgb(239, 239, 239);
+}
+
+.form-image-input {
+  display: none;
+}
+
+.form-description-textarea {
+  font-size: 1.5rem;
+  color: #363636;
+  resize: none;
+  width: 100%;
+  height: 40%;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  background-color: rgb(239, 239, 239);
+}
+
+.form-button-add {
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 10%;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button-add:hover {
+  background-color: rgb(48, 238, 55);
+}
+
+.form-button-add:active {
+  background-color: rgb(68, 155, 71);
+}
+
+.form-button-add-image {
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 10%;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button-add-image:hover {
+  background-color: rgb(48, 238, 55);
+}
+
+.form-button-add-image:active {
+  background-color: rgb(68, 155, 71);
+}
+
+.form-button-reset {
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 10%;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button-reset:hover {
+  background-color: rgb(209, 31, 31);
+}
+
+.form-button-reset:active {
+  background-color: rgb(149, 34, 34);
+}
+
+/*CONTAINER PRODUCTS - DASHBOARD*/
+
+.container-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 45%;
+  height: 90%;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  overflow-y: scroll;
+  background-color: #ffffff2d;
+}
+
+/*PRODUCT CARD - DASHBOARD*/
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 0.5rem solid #eeeeee;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 50%;
+  box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.1);
+  background-color: #e5e5e5;
+}
+
+.product-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: 100%;
+}
+
+.product-image {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  outline: none;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 40%;
+  height: 100%;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #363636;
+  background-color: rgb(211, 210, 210);  /* Color cuando está deshabilitado */
+}
+
+.product-details > h2 {
+  font-size: 1rem;
+  color: rgb(50, 109, 205);
+}
+
+.product-name {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #363636;
+  background-color: rgb(211, 210, 210);  /* Color cuando está deshabilitado */
+}
+
+.product-price {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #363636;
+  background-color: rgb(211, 210, 210);  /* Color cuando está deshabilitado */
+}
+
+.product-description {
+  width: 100%;
+  height: 12rem;
+  padding: 1rem;
+  border: 0.1rem solid rgb(231, 231, 231);
+  border-radius: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  color: #363636;
+  background-color: rgb(211, 210, 210);  /* Color cuando está deshabilitado */
+}
+
+.editing {
+  background-color: #e6ffe6;  /* Color cuando está habilitado para editar */
+}
+
+.edit-button-product {
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.delete-button-product {
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 3rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: rgb(32, 58, 90);
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+
+label {
+  font-size: 1.2rem;
+}

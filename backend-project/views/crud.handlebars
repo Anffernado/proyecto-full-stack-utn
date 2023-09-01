@@ -1,0 +1,24 @@
+  <div class="menu">
+    <div class="perfil">
+      <img class="perfil-image" src="./images/admin.jpg" alt="user">
+      <h1>Anffer</h1>
+      <h2>anffer@test</h2>
+      <button type="button" class="button-logout">LOGOUT</button>
+    </div>
+    <div class="options">
+      <button type="button" class="button-get-content">PRODUCTS</button>
+    </div>
+  </div>
+
+  <form class="form-add-content" action="http://localhost:8080/test" method="post" enctype="multipart/form-data">
+    <img class="form-preview-image" src="./images/preview-image.jpg" alt="Image preview">
+    <input class="form-name-input" type="text" name="name" placeholder="Name">
+    <input class="form-price-input" type="text" name="price" placeholder="Price">
+    <input class="form-image-input" type="file" name="image">
+    <textarea class="form-description-textarea" name="description" cols="30" rows="10"
+      placeholder="Description"></textarea>
+    <button class="form-button-add" type="submit">ADD</button>
+    <button class="form-button-add-image" type="button">ADD IMAGE</button>
+    <button class="form-button-reset" type="reset">RESET</button>
+  </form>
+  <div class="container-products"></div>
